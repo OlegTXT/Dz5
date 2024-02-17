@@ -17,12 +17,6 @@
             <hr>
         {% endfor %}
 
-        {% for product in products %}
-            <li>
-                <a href="{% url 'product_detail' pk=product.pk %}">{{ product.name }}</a>
-                <a href="{% url 'product_delete' pk=product.pk %}">Delete</a>
-            </li>
-        {% endfor %}
     </ul>
     <a href="{% url 'product_create' %}">Create New Product</a><br>
     <a href="{% url 'category_create' %}">Create New Category</a>
